@@ -18,13 +18,13 @@ struct CoffeeShop {
 		}
 	}
 	
-	mutating func order(_ coffee: Coffee, customersName: String) {
+	mutating func order(_ coffee: Coffee, _ customersName: String) {
 		totalSales += coffee.price
 		print("order - 수익 : \(coffee.price), 매출액 : \(totalSales)")
-		makeCoffee(coffee, customersName: customersName)
+		makeCoffee(coffee, customersName)
 	}
 	
-	mutating func makeCoffee(_ coffee: Coffee, customersName: String) {
+	mutating func makeCoffee(_ coffee: Coffee, _ customersName: String) {
 		print("바리스타 : \(barista.name), \(coffee.name)를 만듭니다.")
 		let coffeeName: String = "\(customersName) 님의 \(coffee.name)가 준비되었습니다. 픽업대에서 가져가주세요."
 		pickupTable = coffeeName
