@@ -1,7 +1,6 @@
 import Foundation
 
 enum Coffee: CaseIterable {
-	
 	case americano, cafeLatte, dolceLatte, frappuccino
 	var price: Int {
 		switch self {
@@ -15,7 +14,6 @@ enum Coffee: CaseIterable {
 			return 6300
 		}
 	}
-//	func fetchName() -> String {
 	var name: String {
 		switch self {
 		case .americano:
